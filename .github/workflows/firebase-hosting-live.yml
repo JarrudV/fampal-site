@@ -32,3 +32,4 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
           projectId: "fampals-56984122-8166e"
           channelId: "live"
+          target: "fampal-site"
