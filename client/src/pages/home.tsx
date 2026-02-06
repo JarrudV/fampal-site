@@ -19,14 +19,16 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-8">
             {/* Hero Text */}
             <div className="flex-1 text-center md:text-left space-y-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-orange-100 shadow-sm text-sm font-medium text-orange-600 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm text-sm font-medium text-blue-600 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
                 The safe way to plan family fun
               </div>
               
               {/* Increased leading and added padding to fix clipping issues */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.2] pb-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-                Less searching. <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Less guessing.</span>
+                Less searching.<br/>
+                <span className="text-blue-600">Less guessing.</span><br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Family adventures made easy.</span>
               </h1>
               
               <p className="text-lg md:text-xl text-slate-500 max-w-xl mx-auto md:mx-0 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
@@ -35,7 +37,7 @@ export default function Home() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-300">
-                <Button size="lg" className="rounded-full px-8 h-12 text-base shadow-xl shadow-orange-500/20 bg-primary hover:bg-primary/90 text-white w-full sm:w-auto" asChild>
+                <Button size="lg" className="rounded-full px-8 h-12 text-base shadow-xl shadow-blue-500/20 bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto" asChild>
                   <a href={APP_URL}>Open the app <ArrowRight className="ml-2 w-4 h-4" /></a>
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full px-8 h-12 text-base bg-white border-slate-200 hover:bg-slate-50 text-slate-700 w-full sm:w-auto" asChild>
