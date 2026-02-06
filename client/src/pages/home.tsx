@@ -25,10 +25,10 @@ export default function Home() {
               </div>
               
               {/* Increased leading and added padding to fix clipping issues */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.2] pb-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1] pb-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
                 Less searching.<br/>
                 <span className="text-blue-600">Less guessing.</span><br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Family adventures made easy.</span>
+                <span className="text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block mt-2">Adventures made easy.</span>
               </h1>
               
               <p className="text-lg md:text-xl text-slate-500 max-w-xl mx-auto md:mx-0 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
