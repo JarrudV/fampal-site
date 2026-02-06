@@ -60,6 +60,8 @@ export function PhoneMockup() {
                 <div className="flex items-center gap-1">
                   <span className="text-orange-400 text-xs">★ 4.6</span>
                   <span className="text-slate-300 text-[10px]">$$</span>
+                  <span className="ml-2 text-[9px] bg-green-100 text-green-600 px-1.5 rounded-sm">Playground</span>
+                  <span className="text-[9px] bg-green-100 text-green-600 px-1.5 rounded-sm">Pram Access</span>
                 </div>
               </div>
               <div className="flex flex-col justify-between items-end">
@@ -76,6 +78,7 @@ export function PhoneMockup() {
                 <div className="flex items-center gap-1">
                   <span className="text-orange-400 text-xs">★ 4.4</span>
                   <span className="text-slate-300 text-[10px]">$$</span>
+                  <span className="ml-2 text-[9px] bg-green-100 text-green-600 px-1.5 rounded-sm">Fenced</span>
                 </div>
               </div>
               <div className="flex flex-col justify-between items-end">

@@ -69,7 +69,7 @@ export default function Pricing() {
           <div className="mt-16 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-100 shadow-sm text-sm text-slate-500">
               <ShieldCheck size={16} className="text-green-500" />
-              Payments handled securely. In-app purchases available on iOS and Android.
+              <span className="font-medium">Payments handled securely. In-app purchases available on iOS and Android.</span>
             </div>
           </div>
         </div>

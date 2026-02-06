@@ -21,15 +21,16 @@ export default function Home() {
             <div className="flex-1 text-center md:text-left space-y-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm text-sm font-medium text-blue-600 animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                The safe way to share family memories
+                The safe way to plan family fun
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1] animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-                Plan adventures & <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-sky-400">share memories</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">securely</span>
+                Less searching. <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-sky-400">Less guessing.</span>
               </h1>
               
               <p className="text-lg md:text-xl text-slate-500 max-w-xl mx-auto md:mx-0 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-                FamPal helps you discover kid-friendly activities tailored to your child's profile, link with your partner, and keep special moments private within your circle.
+                Know the facilities upfront (play areas, pram access, toilets). Decide together, save easy wins, and enjoy family time without the stress.
+                <span className="block mt-2 text-sm text-slate-400">Private by default. Secure by design.</span>
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-300">
@@ -85,15 +86,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-10 border-y border-slate-100 bg-slate-50/50">
-        <div className="container-width">
-          <p className="text-center text-sm font-medium text-slate-400 uppercase tracking-wider mb-6">Partnering with secure technology</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Placeholder Logos - Using text for now as requested */}
-            <div className="font-bold text-xl text-slate-600 flex items-center gap-2"><BrainCircuit className="w-6 h-6" /> Gemini AI</div>
-            <div className="font-bold text-xl text-slate-600 flex items-center gap-2"><MapPin className="w-6 h-6" /> Google Maps</div>
-            <div className="font-bold text-xl text-slate-600 flex items-center gap-2"><Shield className="w-6 h-6" /> Secure Cloud</div>
+      {/* Pain Section */}
+      <section className="py-12 bg-white border-b border-slate-100">
+        <div className="container-width max-w-4xl text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">
+            Tired of Googling "kid friendly places" and calling to check for high chairs?
+          </h2>
+          <div className="flex flex-wrap justify-center gap-4 text-slate-500">
+             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">🚫 Guessing facilities</span>
+             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">🚫 WhatsApp link chaos</span>
+             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">🚫 Disappointing outings</span>
+          </div>
+          <div className="pt-4">
+             <p className="text-xl font-medium text-blue-600">FamPal fixes this.</p>
           </div>
         </div>
       </section>
@@ -102,46 +107,46 @@ export default function Home() {
       <section className="py-20 md:py-32">
         <div className="container-width">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Designed for privacy, built for fun</h2>
-            <p className="text-lg text-slate-500">FamPal brings modern tech and strict privacy together so you can focus on making memories.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Real world family advice</h2>
+            <p className="text-lg text-slate-500">We focus on the practical details that make or break a family outing.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard 
-              icon={<Users className="text-blue-500" />}
-              title="Secure Partner Linking"
-              description="Link accounts with your spouse to co-manage itineraries and memories in a shared, private space."
+              icon={<MapPin className="text-blue-500" />}
+              title="Know Before You Go"
+              description="See facilities upfront: Is there a play area? Is it fenced? Are there baby changing stations? No more surprises."
               color="bg-blue-50"
+            />
+            <FeatureCard 
+              icon={<BrainCircuit className="text-purple-500" />}
+              title="Review Summaries"
+              description="Stop reading 50 reviews. Our AI scans them for you and highlights safety, facilities, and vibe instantly."
+              color="bg-purple-50"
+            />
+            <FeatureCard 
+              icon={<Users className="text-green-500" />}
+              title="Plan Together"
+              description="Link with your partner to save ideas to a shared list. Stop sending links back and forth on WhatsApp."
+              color="bg-green-50"
+            />
+            <FeatureCard 
+              icon={<Heart className="text-red-500" />}
+              title="Save What Works"
+              description="Build a library of 'Safe Bets'—places you know your family loves, organized and ready for next time."
+              color="bg-red-50"
             />
             <FeatureCard 
               icon={<Lock className="text-orange-500" />}
               title="Private Memories"
-              description="Share photos and notes like social media, but only with the people you trust. Private by default."
+              description="Keep photos and notes private. Share only with the people you trust, or keep them just for you."
               color="bg-orange-50"
             />
             <FeatureCard 
-              icon={<Shield className="text-green-500" />}
+              icon={<Shield className="text-teal-500" />}
               title="Secure Child Profiles"
-              description="Tailor search results to your child's age without compromising their data privacy."
-              color="bg-green-50"
-            />
-            <FeatureCard 
-              icon={<BrainCircuit className="text-purple-500" />}
-              title="AI Summaries"
-              description="Powered by Gemini AI. Get instant summaries of thousands of reviews focused on family-friendliness."
-              color="bg-purple-50"
-            />
-            <FeatureCard 
-              icon={<MapPin className="text-red-500" />}
-              title="Google Reviews Integration"
-              description="See real-time ratings and reviews from Google Maps directly within the app."
-              color="bg-red-50"
-            />
-            <FeatureCard 
-              icon={<Heart className="text-pink-500" />}
-              title="Family Circles"
-              description="Create circles for Grandparents, School Friends, or Trip Groups to share specific plans securely."
-              color="bg-pink-50"
+              description="Tailor recommendations to your child's age group without compromising their data privacy."
+              color="bg-teal-50"
             />
           </div>
         </div>
@@ -161,18 +166,18 @@ export default function Home() {
             
             <Step 
               number="1"
-              title="Create a Secure Profile"
-              description="Set up your family profile and link with your partner for shared planning."
+              title="Pick a Vibe"
+              description="Tell us who's coming (ages, interests) and we'll filter out the places that won't work."
             />
             <Step 
               number="2"
-              title="Discover with AI"
-              description="Find the perfect spots using our AI-powered summaries and child-friendly filters."
+              title="Check What Matters"
+              description="See facility details and AI summaries instantly. No more guessing."
             />
             <Step 
               number="3"
-              title="Capture Private Memories"
-              description="Save photos and notes to your private timeline or share with trusted circles."
+              title="Share, Go, Remember"
+              description="Send the plan to your partner, enjoy the day, and save the memory privately."
             />
           </div>
         </div>

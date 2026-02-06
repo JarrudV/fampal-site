@@ -26,7 +26,7 @@ export const PRICING_TIERS = [
       "AI Summaries by Gemini",
       "Exclusive deals"
     ],
-    cta: "Go Pro",
+    cta: "Coming Soon",
     popular: true
   },
   {
@@ -40,7 +40,7 @@ export const PRICING_TIERS = [
       "Founder's badge",
       "No recurring fees"
     ],
-    cta: "Get Lifetime",
+    cta: "Early Access",
     popular: false
   }
 ];
@@ -48,7 +48,7 @@ export const PRICING_TIERS = [
 export const FAQS = [
   {
     question: "What makes FamPal different?",
-    answer: "FamPal is built specifically for families. We use Secure Child Profiles to tailor search results to your kids' ages and needs. Plus, our 'Memories' feature lets you privately share moments with your inner circle, unlike public social media."
+    answer: "FamPal is built specifically to remove the stress of family outings. We focus on showing you facilities upfront (like toilets, parking, and play areas) and summarizing real reviews so you don't have to guess if a place is truly kid-friendly."
   },
   {
     question: "Is my data private?",
