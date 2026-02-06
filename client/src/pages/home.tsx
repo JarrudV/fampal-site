@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout";
 import { PhoneMockup } from "@/components/phone-mockup";
 import { Button } from "@/components/ui/button";
 import { APP_URL } from "@/lib/constants";
-import { ArrowRight, MapPin, Heart, Users, Star, Sparkles, Shield, Clock } from "lucide-react";
+import { ArrowRight, MapPin, Heart, Users, Star, Sparkles, Shield, Lock, BrainCircuit } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -11,29 +11,29 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-8 pb-16 md:pt-16 md:pb-24 overflow-hidden">
         {/* Background Gradients */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[800px] bg-[radial-gradient(ellipse_at_top,var(--color-orange-50),transparent_70%)] -z-10 opacity-60"></div>
-        <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-orange-100/50 rounded-full blur-3xl -z-10 mix-blend-multiply animate-pulse" style={{ animationDuration: '4s' }}></div>
-        <div className="absolute top-40 left-0 w-[400px] h-[400px] bg-blue-100/40 rounded-full blur-3xl -z-10 mix-blend-multiply"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[800px] bg-[radial-gradient(ellipse_at_top,var(--color-blue-50),transparent_70%)] -z-10 opacity-60"></div>
+        <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-3xl -z-10 mix-blend-multiply animate-pulse" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute top-40 left-0 w-[400px] h-[400px] bg-orange-100/40 rounded-full blur-3xl -z-10 mix-blend-multiply"></div>
 
         <div className="container-width">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-8">
             {/* Hero Text */}
             <div className="flex-1 text-center md:text-left space-y-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-orange-100 shadow-sm text-sm font-medium text-orange-600 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-                The #1 app for family adventures
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm text-sm font-medium text-blue-600 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                The safe way to share family memories
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1] animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-                Plan better family <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">adventures</span> together
+                Plan adventures & <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-sky-400">share memories</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">securely</span>
               </h1>
               
               <p className="text-lg md:text-xl text-slate-500 max-w-xl mx-auto md:mx-0 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-                FamPal helps you discover kid-friendly activities, organize your itinerary, and share memories with your inner circle. Less planning, more bonding.
+                FamPal helps you discover kid-friendly activities tailored to your child's profile, link with your partner, and keep special moments private within your circle.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-300">
-                <Button size="lg" className="rounded-full px-8 h-12 text-base shadow-xl shadow-orange-500/20 bg-primary hover:bg-primary/90 text-white w-full sm:w-auto" asChild>
+                <Button size="lg" className="rounded-full px-8 h-12 text-base shadow-xl shadow-blue-500/20 bg-primary hover:bg-primary/90 text-white w-full sm:w-auto" asChild>
                   <a href={APP_URL}>Open the app <ArrowRight className="ml-2 w-4 h-4" /></a>
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full px-8 h-12 text-base bg-white border-slate-200 hover:bg-slate-50 text-slate-700 w-full sm:w-auto" asChild>
@@ -49,34 +49,34 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <p>Trusted by 1,000+ families</p>
+                <p>Trusted by modern families</p>
               </div>
             </div>
             
             {/* Phone Mockup */}
             <div className="flex-1 flex justify-center md:justify-end animate-in fade-in slide-in-from-right-8 duration-1000 delay-200">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-orange-200 to-blue-200 rounded-full blur-[80px] opacity-40 -z-10 transform translate-y-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-200 to-orange-200 rounded-full blur-[80px] opacity-40 -z-10 transform translate-y-10"></div>
                 <PhoneMockup />
                 
                 {/* Floating Elements */}
                 <div className="absolute top-1/4 -left-12 bg-white p-3 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
                   <div className="p-2 bg-green-100 rounded-full text-green-600">
-                    <MapPin size={20} />
+                    <Shield size={20} />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400 font-medium">New Place Found</p>
-                    <p className="text-sm font-bold text-slate-800">Sunny Park</p>
+                    <p className="text-xs text-slate-400 font-medium">Child Profile</p>
+                    <p className="text-sm font-bold text-slate-800">Secure & Private</p>
                   </div>
                 </div>
                 
                 <div className="absolute bottom-1/4 -right-8 bg-white p-3 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-3 animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '4s' }}>
-                  <div className="p-2 bg-red-100 rounded-full text-red-500">
-                    <Heart size={20} fill="currentColor" />
+                  <div className="p-2 bg-purple-100 rounded-full text-purple-500">
+                    <BrainCircuit size={20} />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400 font-medium">Saved to</p>
-                    <p className="text-sm font-bold text-slate-800">Summer Trip</p>
+                    <p className="text-xs text-slate-400 font-medium">Gemini AI</p>
+                    <p className="text-sm font-bold text-slate-800">Summarizing Reviews...</p>
                   </div>
                 </div>
               </div>
@@ -88,15 +88,12 @@ export default function Home() {
       {/* Social Proof */}
       <section className="py-10 border-y border-slate-100 bg-slate-50/50">
         <div className="container-width">
-          <p className="text-center text-sm font-medium text-slate-400 uppercase tracking-wider mb-6">Trusted by modern families everywhere</p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Placeholder Logos */}
-            {['FamilyGuide', 'KidExplorer', 'ParentLife', 'Moments', 'Together'].map((name) => (
-              <div key={name} className="flex items-center gap-2 font-bold text-xl text-slate-600">
-                <div className="w-6 h-6 rounded bg-slate-400/50"></div>
-                {name}
-              </div>
-            ))}
+          <p className="text-center text-sm font-medium text-slate-400 uppercase tracking-wider mb-6">Partnering with secure technology</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            {/* Placeholder Logos - Using text for now as requested */}
+            <div className="font-bold text-xl text-slate-600 flex items-center gap-2"><BrainCircuit className="w-6 h-6" /> Gemini AI</div>
+            <div className="font-bold text-xl text-slate-600 flex items-center gap-2"><MapPin className="w-6 h-6" /> Google Maps</div>
+            <div className="font-bold text-xl text-slate-600 flex items-center gap-2"><Shield className="w-6 h-6" /> Secure Cloud</div>
           </div>
         </div>
       </section>
@@ -105,46 +102,46 @@ export default function Home() {
       <section className="py-20 md:py-32">
         <div className="container-width">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Everything you need for perfect family days</h2>
-            <p className="text-lg text-slate-500">FamPal brings all your planning into one beautiful, easy-to-use app designed for busy parents.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Designed for privacy, built for fun</h2>
+            <p className="text-lg text-slate-500">FamPal brings modern tech and strict privacy together so you can focus on making memories.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard 
-              icon={<MapPin className="text-blue-500" />}
-              title="Discover Places"
-              description="Find kid-friendly parks, museums, and hidden gems near you or at your destination."
+              icon={<Users className="text-blue-500" />}
+              title="Secure Partner Linking"
+              description="Link accounts with your spouse to co-manage itineraries and memories in a shared, private space."
               color="bg-blue-50"
             />
             <FeatureCard 
-              icon={<Heart className="text-red-500" />}
-              title="Save Favorites"
-              description="Build lists of places you want to visit. Organize them by trip or theme."
-              color="bg-red-50"
-            />
-            <FeatureCard 
-              icon={<Users className="text-purple-500" />}
-              title="Share with Circles"
-              description="Invite family members to your circle. Plan together and keep everyone in the loop."
-              color="bg-purple-50"
-            />
-            <FeatureCard 
-              icon={<Star className="text-yellow-500" />}
-              title="Build Memories"
-              description="Keep a digital journal of your adventures. Upload photos and notes to cherish forever."
-              color="bg-yellow-50"
-            />
-            <FeatureCard 
-              icon={<Sparkles className="text-orange-500" />}
-              title="Smart Suggestions"
-              description="Get personalized recommendations based on your family's interests and ages."
+              icon={<Lock className="text-orange-500" />}
+              title="Private Memories"
+              description="Share photos and notes like social media, but only with the people you trust. Private by default."
               color="bg-orange-50"
             />
             <FeatureCard 
               icon={<Shield className="text-green-500" />}
-              title="Safe & Private"
-              description="Your family data is private. Share only with the people you trust in your circle."
+              title="Secure Child Profiles"
+              description="Tailor search results to your child's age without compromising their data privacy."
               color="bg-green-50"
+            />
+            <FeatureCard 
+              icon={<BrainCircuit className="text-purple-500" />}
+              title="AI Summaries"
+              description="Powered by Gemini AI. Get instant summaries of thousands of reviews focused on family-friendliness."
+              color="bg-purple-50"
+            />
+            <FeatureCard 
+              icon={<MapPin className="text-red-500" />}
+              title="Google Reviews Integration"
+              description="See real-time ratings and reviews from Google Maps directly within the app."
+              color="bg-red-50"
+            />
+            <FeatureCard 
+              icon={<Heart className="text-pink-500" />}
+              title="Family Circles"
+              description="Create circles for Grandparents, School Friends, or Trip Groups to share specific plans securely."
+              color="bg-pink-50"
             />
           </div>
         </div>
@@ -164,18 +161,18 @@ export default function Home() {
             
             <Step 
               number="1"
-              title="Create a Circle"
-              description="Sign up and create a private circle for your family members."
+              title="Create a Secure Profile"
+              description="Set up your family profile and link with your partner for shared planning."
             />
             <Step 
               number="2"
-              title="Plan Together"
-              description="Add activities to your itinerary. Everyone can suggest ideas."
+              title="Discover with AI"
+              description="Find the perfect spots using our AI-powered summaries and child-friendly filters."
             />
             <Step 
               number="3"
-              title="Enjoy the Adventure"
-              description="Follow your plan, take photos, and save memories in the app."
+              title="Capture Private Memories"
+              description="Save photos and notes to your private timeline or share with trusted circles."
             />
           </div>
         </div>
@@ -187,17 +184,17 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Loved by families</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <TestimonialCard 
-              quote="FamPal changed how we do weekends. No more arguing about where to go!"
+              quote="I love that I can share photos with the grandparents without posting them on public social media."
               author="Sarah J."
               role="Mom of 2"
             />
             <TestimonialCard 
-              quote="I love that I can share the itinerary with my husband and he actually knows what's happening."
+              quote="The AI summaries save me so much time reading reviews. I know instantly if a place is toddler-friendly."
               author="Michael T."
               role="Dad of 3"
             />
             <TestimonialCard 
-              quote="The best app for keeping track of all the cool places we want to visit someday."
+              quote="Partner linking is a game changer. We both add ideas to our weekend itinerary."
               author="Emily R."
               role="Adventure Mom"
             />
@@ -208,13 +205,13 @@ export default function Home() {
       {/* CTA Banner */}
       <section className="py-20">
         <div className="container-width">
-          <div className="bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl p-8 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-16 text-center text-white shadow-2xl shadow-blue-900/20 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvc3ZnPg==')] opacity-30"></div>
             
             <div className="relative z-10 max-w-2xl mx-auto space-y-8">
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Ready for your next adventure?</h2>
-              <p className="text-orange-100 text-lg md:text-xl">Join thousands of families planning better days together with FamPal.</p>
-              <Button size="lg" className="bg-white text-orange-600 hover:bg-orange-50 border-0 shadow-lg rounded-full px-10 h-14 text-lg font-semibold" asChild>
+              <p className="text-blue-100 text-lg md:text-xl">Join thousands of families planning better, safer days together with FamPal.</p>
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 border-0 shadow-lg rounded-full px-10 h-14 text-lg font-semibold" asChild>
                 <a href={APP_URL}>Get Started for Free</a>
               </Button>
             </div>
@@ -240,7 +237,7 @@ function FeatureCard({ icon, title, description, color }: { icon: React.ReactNod
 function Step({ number, title, description }: { number: string, title: string, description: string }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="w-12 h-12 rounded-full bg-white border-2 border-orange-100 text-orange-600 font-bold text-xl flex items-center justify-center shadow-sm mb-6 relative z-10">
+      <div className="w-12 h-12 rounded-full bg-white border-2 border-blue-100 text-blue-600 font-bold text-xl flex items-center justify-center shadow-sm mb-6 relative z-10">
         {number}
       </div>
       <h3 className="text-xl font-bold text-slate-900 mb-2">{title}</h3>

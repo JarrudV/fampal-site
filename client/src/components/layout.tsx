@@ -3,6 +3,7 @@ import { Menu, X, Instagram, Twitter, Facebook } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { APP_URL } from "@/lib/constants";
+import { FamPalLogo } from "@/components/fampal-logo";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -28,12 +29,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         }`}
       >
         <div className="container-width flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            {/* Logo Placeholder - would replace with real SVG if available */}
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-transform shadow-md shadow-primary/20">
-              F
-            </div>
-            <span className="font-extrabold text-xl md:text-2xl tracking-tight text-slate-900">FamPal</span>
+          <Link href="/" className="flex items-center gap-3 group">
+            <FamPalLogo className="w-10 h-10 group-hover:scale-105 transition-transform shadow-lg shadow-blue-500/20 rounded-xl" />
+            <span className="font-extrabold text-2xl tracking-tight text-slate-900">FamPal</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -84,9 +82,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
             <div className="col-span-1 md:col-span-2">
               <Link href="/" className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                  F
-                </div>
+                <FamPalLogo className="w-8 h-8 rounded-lg" />
                 <span className="font-bold text-xl text-slate-900">FamPal</span>
               </Link>
               <p className="text-slate-500 max-w-sm leading-relaxed">

@@ -6,10 +6,10 @@ export const PRICING_TIERS = [
     price: "R0",
     description: "Perfect for getting started",
     features: [
-      "Discover local activities",
-      "Save favorites",
-      "Create 1 circle",
-      "Basic planning tools"
+      "Discover local family-friendly spots",
+      "Secure Child Profiles for tailored results",
+      "Save favorites & build itineraries",
+      "Create 1 circle"
     ],
     cta: "Get Started",
     popular: false
@@ -21,10 +21,10 @@ export const PRICING_TIERS = [
     description: "For active families",
     features: [
       "Everything in Free",
-      "Unlimited circles",
-      "Advanced itinerary builder",
-      "Exclusive deals",
-      "Priority support"
+      "Unlimited Friend Circles",
+      "Secure Partner Linking",
+      "AI Summaries by Gemini",
+      "Exclusive deals"
     ],
     cta: "Go Pro",
     popular: true
@@ -36,7 +36,7 @@ export const PRICING_TIERS = [
     description: "Pay once, enjoy forever",
     features: [
       "All Pro features forever",
-      "Early access to new features",
+      "Early access to new AI features",
       "Founder's badge",
       "No recurring fees"
     ],
@@ -47,31 +47,23 @@ export const PRICING_TIERS = [
 
 export const FAQS = [
   {
-    question: "What is FamPal?",
-    answer: "FamPal is your family's companion for discovering amazing activities, planning adventures, and sharing memories. We help you spend less time planning and more time bonding."
+    question: "What makes FamPal different?",
+    answer: "FamPal is built specifically for families. We use Secure Child Profiles to tailor search results to your kids' ages and needs. Plus, our 'Memories' feature lets you privately share moments with your inner circle, unlike public social media."
   },
   {
-    question: "Is it free?",
-    answer: "Yes! FamPal has a generous Free plan that lets you discover activities and save your favorites. We also offer Pro and Lifetime plans for power users who want unlimited circles and advanced planning tools."
+    question: "Is my data private?",
+    answer: "Absolutely. Your Memories are private by default and only shared if you explicitly choose to share them with your Partner or Circle. Your child's profile data is encrypted and used solely to improve your recommendations."
   },
   {
-    question: "How does Pro work?",
-    answer: "FamPal Pro is a yearly subscription costing just R75/year. It unlocks unlimited circles, advanced itinerary building, and exclusive family deals."
+    question: "What is Partner Linking?",
+    answer: "Partner Linking allows you to connect your account with a spouse or partner. This creates a shared space for itineraries, saved places, and memories, making co-parenting and planning seamless."
   },
   {
-    question: "What is Lifetime?",
-    answer: "The Lifetime plan is a one-time payment of R399. You pay once and get access to all Pro features forever, with no monthly or yearly bills."
+    question: "How do AI Summaries work?",
+    answer: "We use Google Gemini to analyze thousands of reviews for places and give you a concise summary focusing on family-friendly aspects like safety, facilities, and kid-friendliness."
   },
   {
-    question: "Can I share memories?",
-    answer: "Absolutely. You can create shared 'Circles' with family members or friends to plan together and share photos/notes from your adventures privately."
-  },
-  {
-    question: "Is FamPal family friendly and private?",
-    answer: "Safety and privacy are our top priorities. Your family data is encrypted, and we have strict content guidelines to ensure all activity suggestions are family-friendly."
-  },
-  {
-    question: "How do circles work?",
-    answer: "Circles are private groups. You can have a circle for your immediate family, one for the extended family, or one for a specific trip with friends. Everyone in the circle can contribute to the plan."
+    question: "How do Circles work?",
+    answer: "Circles are private groups (like 'Grandparents' or 'School Friends'). You can share specific plans or memories with a Circle without making them public to the whole world."
   }
 ];

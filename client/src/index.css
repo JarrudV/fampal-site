@@ -79,21 +79,21 @@
   --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
 
-  /* Primary Brand Color - Friendly Orange */
-  --primary: 25 95% 53%;
+  /* Primary Brand Color - FamPal Blue (Bright, Trustworthy) */
+  --primary: 217 91% 60%; /* #3b82f6 approx */
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary - Soft warm gray/orange tint */
-  --secondary: 30 20% 96%;
-  --secondary-foreground: 25 95% 40%;
+  /* Secondary - Light Blue Tint */
+  --secondary: 214 94% 94%; /* Light blue background */
+  --secondary-foreground: 217 91% 60%;
 
   /* Muted - Neutral Grays */
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
 
-  /* Accent - Used for hover states/highlights */
-  --accent: 25 95% 96%;
-  --accent-foreground: 25 95% 40%;
+  /* Accent - FamPal Orange (Energetic, Highlights) */
+  --accent: 25 95% 53%; /* #f97316 approx */
+  --accent-foreground: 0 0% 100%;
 
   /* Destructive */
   --destructive: 0 84.2% 60.2%;
@@ -102,10 +102,10 @@
   /* Borders & Inputs */
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 25 95% 53%;
+  --ring: 217 91% 60%;
 
   /* Radius */
-  --radius: 1rem; /* 16px - friendly rounded corners */
+  --radius: 1.5rem; /* 24px - Extra rounded for friendly app feel */
 
   /* Sidebar (if needed) */
   --sidebar: 0 0% 98%;
