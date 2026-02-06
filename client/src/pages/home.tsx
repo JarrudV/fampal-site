@@ -10,22 +10,23 @@ export default function Home() {
     <Layout>
       {/* Hero Section */}
       <section className="relative pt-8 pb-16 md:pt-16 md:pb-24 overflow-hidden">
-        {/* Background Gradients */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[800px] bg-[radial-gradient(ellipse_at_top,var(--color-blue-50),transparent_70%)] -z-10 opacity-60"></div>
-        <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-3xl -z-10 mix-blend-multiply animate-pulse" style={{ animationDuration: '4s' }}></div>
-        <div className="absolute top-40 left-0 w-[400px] h-[400px] bg-orange-100/40 rounded-full blur-3xl -z-10 mix-blend-multiply"></div>
+        {/* Background Gradients - Reverted to Orange Theme */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[800px] bg-[radial-gradient(ellipse_at_top,var(--color-orange-50),transparent_70%)] -z-10 opacity-60"></div>
+        <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-orange-100/50 rounded-full blur-3xl -z-10 mix-blend-multiply animate-pulse" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute top-40 left-0 w-[400px] h-[400px] bg-blue-100/40 rounded-full blur-3xl -z-10 mix-blend-multiply"></div>
 
         <div className="container-width">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-8">
             {/* Hero Text */}
             <div className="flex-1 text-center md:text-left space-y-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm text-sm font-medium text-blue-600 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-orange-100 shadow-sm text-sm font-medium text-orange-600 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
                 The safe way to plan family fun
               </div>
               
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1] animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-                Less searching. <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-sky-400">Less guessing.</span>
+              {/* Increased leading and added padding to fix clipping issues */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.2] pb-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
+                Less searching. <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Less guessing.</span>
               </h1>
               
               <p className="text-lg md:text-xl text-slate-500 max-w-xl mx-auto md:mx-0 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
@@ -34,7 +35,7 @@ export default function Home() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-300">
-                <Button size="lg" className="rounded-full px-8 h-12 text-base shadow-xl shadow-blue-500/20 bg-primary hover:bg-primary/90 text-white w-full sm:w-auto" asChild>
+                <Button size="lg" className="rounded-full px-8 h-12 text-base shadow-xl shadow-orange-500/20 bg-primary hover:bg-primary/90 text-white w-full sm:w-auto" asChild>
                   <a href={APP_URL}>Open the app <ArrowRight className="ml-2 w-4 h-4" /></a>
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full px-8 h-12 text-base bg-white border-slate-200 hover:bg-slate-50 text-slate-700 w-full sm:w-auto" asChild>
@@ -57,7 +58,7 @@ export default function Home() {
             {/* Phone Mockup */}
             <div className="flex-1 flex justify-center md:justify-end animate-in fade-in slide-in-from-right-8 duration-1000 delay-200">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-200 to-orange-200 rounded-full blur-[80px] opacity-40 -z-10 transform translate-y-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-orange-200 to-blue-200 rounded-full blur-[80px] opacity-40 -z-10 transform translate-y-10"></div>
                 <PhoneMockup />
                 
                 {/* Floating Elements */}
