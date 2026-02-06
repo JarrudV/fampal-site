@@ -1,0 +1,129 @@
+You are working inside the existing FamPal repo in Replit.
+
+Goal
+Build a polished, modern, mobile first marketing website for FamPal that matches the look and feel of the FamPal web app (fonts, colours, spacing, button style, rounded corners, soft shadows, friendly vibe). This is a front end only site that will be deployed to Firebase Hosting.
+
+Design direction
+Use the attached example screenshots as style inspiration:
+- Clean white background with soft gradients
+- Big hero headline with a phone mockup in the centre
+- Card based feature sections
+- Pricing section with 3 tiers
+- FAQ accordion
+- Strong, friendly CTAs
+- Modern UI, not “templatey” and not cramped
+
+Brand and styling rules
+- Reuse the FamPal logo and any existing brand colours already in the app. If the app has an accent colour (orange), use it as the main accent for CTAs and highlights.
+- Use the same font family as the app. If the app uses a Google Font already, reuse it. If not, pick a clean modern font (eg Plus Jakarta Sans or Inter) and use consistently.
+- Keep everything consistent: buttons, border radius, spacing, icon style, shadows.
+- UK spelling across the site.
+
+Implementation rules
+- Front end only, no backend work.
+- Must be responsive (mobile first, then tablet, then desktop).
+- Must be fast (optimise images, avoid huge libs, avoid layout shift).
+- Use the existing tech stack already in the repo (likely React + Vite + Tailwind). Do not introduce a new framework unless the repo already uses it.
+- If there is already an existing marketing site folder, improve it. If not, create a /site (or /marketing) folder OR add routes in the current Vite app in a clean way. Prefer separation so the app and marketing site do not break each other.
+- The marketing site must have a clear “Open the app” button that links to https://app.fampal.co.za
+
+Pages and sections to build
+Create these pages (routes) with a consistent header and footer:
+1) Home (/)
+   Hero section:
+   - Headline: “Plan better family adventures together”
+   - Subtext: short, friendly explanation of FamPal (family friendly activity discovery + planning + sharing)
+   - Primary CTA: “Open the app” -> https://app.fampal.co.za
+   - Secondary CTA: “See pricing” -> /pricing
+   - Centre phone mockup: create a carousel inside the phone frame (3 to 5 screenshots). If real app screenshots exist in the repo, use them. If not, create tasteful placeholders with the FamPal colours and simple UI shapes.
+   Social proof strip:
+   - A row of “Trusted by families” style micro logos or placeholder brand marks (use tasteful placeholder icons, not real brands)
+   Features section (cards):
+   - Discover places and activities
+   - Save favourites
+   - Share plans with your circle
+   - Build memories
+   - Smart suggestions
+   How it works:
+   - 3 steps with small illustrations/icons
+   Testimonials:
+   - 3 testimonial cards with names and short quotes (placeholder text is fine)
+   Final CTA banner:
+   - Gradient background, headline, Open the app button
+
+2) Pricing (/pricing)
+   Three tiers (use the pricing you already decided for FamPal):
+   - Free: R0
+   - Pro: R75 per year
+   - Lifetime: R399 once off
+   Each card should have:
+   - Title, price, short description
+   - Bullet list of included features
+   - CTA button (for now these can link to https://app.fampal.co.za and/or open a “Coming soon” modal)
+   Add a small note below pricing:
+   - “Payments handled securely. In app purchases available on iOS and Android.”
+
+3) FAQ (/faq)
+   Accordion list:
+   - What is FamPal?
+   - Is it free?
+   - How does Pro work?
+   - What is Lifetime?
+   - Can I share memories?
+   - Is FamPal family friendly and private?
+   - How do circles work?
+
+4) Support (/support)
+   Simple support page:
+   - Email placeholder
+   - “Contact support” button (mailto)
+   - Links to Privacy and Terms
+
+5) Legal
+   - /privacy (simple privacy policy placeholder copy, readable layout)
+   - /terms (simple terms placeholder copy)
+   These can be lightweight placeholders but formatted nicely.
+
+Header and footer requirements
+Header:
+- Left: FamPal logo
+- Right: nav links (Home, Pricing, FAQ, Support)
+- Button: Open the app (prominent)
+- Mobile: hamburger menu
+
+Footer:
+- Logo + one liner
+- Links: Privacy, Terms, Support
+- Optional: small social icons (placeholders)
+
+Assets
+- Create an /assets folder for marketing images
+- If the app has a logo file already, reuse it
+- Create a phone frame component that can display screenshots (real or placeholder)
+- Do not use random low quality stock photos
+
+SEO and metadata
+- Set correct page titles and meta descriptions
+- Add Open Graph tags for sharing (use placeholder image if needed)
+- Add favicon from existing assets if available
+
+Firebase Hosting compatibility
+- Ensure build output works with Firebase Hosting (single page app rewrites if using client side routing)
+- Confirm build command and output folder in README notes
+
+Deliverables
+1) Working marketing site with the pages above
+2) Clean component structure (Header, Footer, Hero, PricingCards, FAQAccordion, PhoneMockupCarousel, FeatureGrid)
+3) A short README section explaining how to run locally and how to deploy to Firebase Hosting
+
+Quality bar (non negotiable)
+- Must look premium and modern like the reference examples
+- Must feel consistent with FamPal app styling
+- Buttons, spacing, typography must be clean and intentional
+- No clutter, no misaligned elements, no “default template” look
+
+Before finishing
+- Run the site, confirm all routes work
+- Confirm mobile layout is excellent
+- Confirm Lighthouse friendly basics (no giant images, no console errors)
+- Summarise what you changed and where the main files are.
