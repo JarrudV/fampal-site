@@ -24,11 +24,10 @@ export default function Home() {
                 The safe way to plan family fun
               </div>
               
-              {/* Increased leading and added padding to fix clipping issues */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1] pb-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight pb-4 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
                 Less searching.<br/>
                 <span className="text-blue-600">Less guessing.</span><br/>
-                <span className="text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block mt-2">Adventures made easy.</span>
+                <span className="text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block mt-2 pb-1">Adventures made easy.</span>
               </h1>
               
               <p className="text-lg md:text-xl text-slate-500 max-w-xl mx-auto md:mx-0 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
@@ -151,6 +150,18 @@ export default function Home() {
               description="Tailor recommendations to your child's age group without compromising their data privacy."
               color="bg-teal-50"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof / Trust Section - Moved here */}
+      <section className="py-16 bg-slate-50/50 border-y border-slate-100">
+        <div className="container-width">
+          <p className="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">Partnering with secure technology</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-20 opacity-80">
+            <div className="font-bold text-xl md:text-2xl text-slate-600 flex items-center gap-3"><BrainCircuit className="w-8 h-8 text-purple-500" /> Gemini AI</div>
+            <div className="font-bold text-xl md:text-2xl text-slate-600 flex items-center gap-3"><MapPin className="w-8 h-8 text-red-500" /> Google Maps</div>
+            <div className="font-bold text-xl md:text-2xl text-slate-600 flex items-center gap-3"><Shield className="w-8 h-8 text-blue-500" /> Secure Cloud</div>
           </div>
         </div>
       </section>
