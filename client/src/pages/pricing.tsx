@@ -12,6 +12,9 @@ export default function Pricing() {
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900">Simple, fair pricing</h1>
             <p className="text-xl text-slate-500">Start for free, upgrade for more power. No hidden fees.</p>
+            <p className="text-sm font-medium text-blue-600 bg-blue-50 inline-block px-4 py-1.5 rounded-full mt-2">
+              Final pricing will be confirmed at launch. Early users get founder perks.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">

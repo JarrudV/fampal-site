@@ -27,11 +27,11 @@ export default function Home() {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight pb-4 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
                 Less searching.<br/>
                 <span className="text-blue-600">Less guessing.</span><br/>
-                <span className="text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block mt-2 pb-1">Adventures made easy.</span>
+                <span className="text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block mt-2 pb-1">Plan family adventures with ease.</span>
               </h1>
               
               <p className="text-lg md:text-xl text-slate-500 max-w-xl mx-auto md:mx-0 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-                Know the facilities upfront (play areas, pram access, toilets). Decide together, save easy wins, and enjoy family time without the stress.
+                Know the facilities upfront (play areas, pram access, toilets, parking, shade, noise). Stop Googling "kid friendly" and calling places to check—FamPal does it for you.
                 <span className="block mt-2 text-sm text-slate-400">Private by default. Secure by design.</span>
               </p>
               
@@ -40,7 +40,7 @@ export default function Home() {
                   <a href={APP_URL}>Open the app <ArrowRight className="ml-2 w-4 h-4" /></a>
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full px-8 h-12 text-base bg-white border-slate-200 hover:bg-slate-50 text-slate-700 w-full sm:w-auto" asChild>
-                  <Link href="/pricing">See pricing</Link>
+                  <a href="#how-it-works">How it works</a>
                 </Button>
               </div>
               
@@ -92,12 +92,15 @@ export default function Home() {
       <section className="py-12 bg-white border-b border-slate-100">
         <div className="container-width max-w-4xl text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">
-            Tired of Googling "kid friendly places" and calling to check for high chairs?
+            Sound familiar?
           </h2>
           <div className="flex flex-wrap justify-center gap-4 text-slate-500">
-             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">🚫 Guessing facilities</span>
-             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">🚫 WhatsApp link chaos</span>
-             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">🚫 Disappointing outings</span>
+             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“We need to do something with the kids… now what?”</span>
+             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Does this place actually have a play area?”</span>
+             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Is it pram friendly or am I carrying everything?”</span>
+             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Where do we park?”</span>
+             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Is it genuinely kid friendly or just says it is?”</span>
+             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Why am I phoning places like it’s 2009?”</span>
           </div>
           <div className="pt-4">
              <p className="text-xl font-medium text-blue-600">FamPal fixes this.</p>
@@ -116,38 +119,38 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard 
               icon={<MapPin className="text-blue-500" />}
-              title="Know Before You Go"
-              description="See facilities upfront: Is there a play area? Is it fenced? Are there baby changing stations? No more surprises."
+              title="Know before you go"
+              description="Show the facilities that matter: play areas, toilets, pram access, parking, shade."
               color="bg-blue-50"
             />
             <FeatureCard 
               icon={<BrainCircuit className="text-purple-500" />}
-              title="Review Summaries"
-              description="Stop reading 50 reviews. Our AI scans them for you and highlights safety, facilities, and vibe instantly."
+              title="Real world family advice"
+              description="AI summarises reviews to highlight family friendliness so you don’t read 200 reviews."
               color="bg-purple-50"
             />
             <FeatureCard 
               icon={<Users className="text-green-500" />}
-              title="Plan Together"
-              description="Link with your partner to save ideas to a shared list. Stop sending links back and forth on WhatsApp."
+              title="Plan together"
+              description="Share options with your partner or circle and decide once."
               color="bg-green-50"
             />
             <FeatureCard 
               icon={<Heart className="text-red-500" />}
-              title="Save What Works"
-              description="Build a library of 'Safe Bets'—places you know your family loves, organized and ready for next time."
+              title="Save the easy wins"
+              description="Save favourites so next weekend is a one tap decision."
               color="bg-red-50"
             />
             <FeatureCard 
               icon={<Lock className="text-orange-500" />}
-              title="Private Memories"
-              description="Keep photos and notes private. Share only with the people you trust, or keep them just for you."
+              title="Private by default"
+              description="Memories and plans are only visible to people you choose."
               color="bg-orange-50"
             />
             <FeatureCard 
               icon={<Shield className="text-teal-500" />}
-              title="Secure Child Profiles"
-              description="Tailor recommendations to your child's age group without compromising their data privacy."
+              title="Built on trusted tech"
+              description="Google Maps, Gemini AI, secure cloud."
               color="bg-teal-50"
             />
           </div>
@@ -167,11 +170,11 @@ export default function Home() {
       </section>
 
       {/* How it Works */}
-      <section className="py-20 bg-slate-50">
+      <section id="how-it-works" className="py-20 bg-slate-50">
         <div className="container-width">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">How FamPal works</h2>
-            <p className="text-slate-500">Three simple steps to better family time.</p>
+            <p className="text-slate-500">Three simple steps to easier family plans.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center relative">
@@ -180,17 +183,17 @@ export default function Home() {
             
             <Step 
               number="1"
-              title="Pick a Vibe"
+              title="Pick a vibe"
               description="Tell us who's coming (ages, interests) and we'll filter out the places that won't work."
             />
             <Step 
               number="2"
-              title="Check What Matters"
+              title="Check what matters"
               description="See facility details and AI summaries instantly. No more guessing."
             />
             <Step 
               number="3"
-              title="Share, Go, Remember"
+              title="Share, go, remember"
               description="Send the plan to your partner, enjoy the day, and save the memory privately."
             />
           </div>

@@ -1,0 +1,72 @@
+Do NOT redesign the site. Keep the current layout, spacing, colours, typography, components, and overall aesthetic.
+
+This is a copy and content alignment pass so the site matches FamPal’s real superpower: removing the pain of choosing family friendly places by showing practical facilities info and real world advice, then helping families plan together and save what worked.
+
+Hero updates
+- Replace the H1 with:
+  Less searching.
+  Less guessing.
+  Plan family adventures with ease.
+- Update the hero subhead to explicitly mention the practical details parents care about:
+  play areas, pram access, toilets, parking, shade, noise, etc
+  and that FamPal reduces Googling and calling.
+- Keep the primary CTA as “Open the app” linking to https://app.fampal.co.za
+- Change the secondary CTA to “How it works” (scrolls to the How it works section)
+
+Add a short pain section directly under the hero (must match the existing design language)
+Section title: “Sound familiar?”
+Bullets (use these exact ideas, keep tone human and slightly cheeky but not rude):
+- “We need to do something with the kids… now what?”
+- “Does this place actually have a play area?”
+- “Is it pram friendly or am I carrying everything?”
+- “Where do we park?”
+- “Is it genuinely kid friendly or just says it is?”
+- “Why am I phoning places like it’s 2009?”
+Then a short line: “FamPal fixes this.”
+
+Features section updates (rename and reorder cards, keep same card UI)
+Refocus features from privacy first to decision relief first.
+Use this order and headings:
+1 Know before you go
+   Show the facilities that matter: play areas, toilets, pram access, parking, shade.
+2 Real world family advice
+   AI summarises reviews to highlight family friendliness so you don’t read 200 reviews.
+3 Plan together
+   Share options with your partner or circle and decide once.
+4 Save the easy wins
+   Save favourites so next weekend is a one tap decision.
+5 Private by default
+   Memories and plans are only visible to people you choose.
+6 Built on trusted tech
+   Google Maps, Gemini AI, secure cloud.
+
+How it works section updates (keep same layout)
+Title: “How FamPal works”
+Subtitle: “Three simple steps to easier family plans.”
+Steps:
+1 Pick a vibe
+2 Check what matters
+3 Share, go, remember
+
+Phone mockup carousel/screens
+Do not redesign the phone component.
+Update the screens shown so they visually support the new messaging:
+- One screen must clearly show facility chips (play area, toilets, pram friendly, parking).
+- One screen must show an AI review summary style card focused on families.
+- One screen must show save/favourite and share to a circle.
+If real screenshots exist, use them. If not, create high quality in-brand mock screens (not generic templates).
+
+Pricing
+Pricing is not final.
+Keep the pricing page/section but add a small note: “Final pricing will be confirmed at launch. Early users get founder perks.”
+Do not change the pricing amounts yet.
+
+Do not change
+- Overall layout
+- Colour palette
+- Button styles
+- Header/footer structure
+
+After completing changes
+- Run build and ensure no errors
+- Summarise the exact files changed
