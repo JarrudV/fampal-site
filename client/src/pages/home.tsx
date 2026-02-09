@@ -3,31 +3,9 @@ import { Layout } from "@/components/layout";
 import { PhoneMockup } from "@/components/phone-mockup";
 import { Button } from "@/components/ui/button";
 import { APP_URL } from "@/lib/constants";
-import { ArrowRight, MapPin, Heart, Users, Star, Shield, Lock, BrainCircuit } from "lucide-react";
+import { ArrowRight, MapPin, Heart, Users, Star, Shield, Lock, BrainCircuit, Compass, Filter, CheckSquare, Circle, ClipboardList, Share2, Sparkles, LayoutGrid, Moon, Laptop } from "lucide-react";
 
 export default function Home() {
-  /**
-   * =========================
-   * LAUNCH FLAGS (READ ME)
-   * =========================
-   * Keep these OFF until we have real proof.
-   *
-   * SHOW_HERO_SOCIAL_PROOF
-   * - Enables the tiny “Trusted…” row under the hero buttons.
-   * - When you enable it later, replace placeholder circles with:
-   *   - real avatar images, OR
-   *   - an App Store rating snippet (e.g. “Rated 4.8 on the App Store”)
-   *
-   * SHOW_TESTIMONIALS
-   * - Enables the “Loved by families” section.
-   * - Replace hard-coded quotes with:
-   *   - App Store / Google Play reviews, OR
-   *   - real user quotes (with permission)
-   *
-   * HAS_SCALE_CLAIM
-   * - Controls whether we can say “Join thousands of families…”
-   * - Leave false until the numbers are real.
-   */
   const SHOW_HERO_SOCIAL_PROOF = false;
   const SHOW_TESTIMONIALS = false;
   const HAS_SCALE_CLAIM = false;
@@ -50,19 +28,15 @@ export default function Home() {
             <div className="flex-1 text-center md:text-left space-y-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm text-sm font-medium text-blue-600 animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                The safe way to plan family fun
+                Your family's local guide
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight pb-4 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-                Less searching.<br />
-                <span className="text-blue-600">Less guessing.</span><br />
-                <span className="text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block mt-2 pb-1">
-                  Plan your next adventure with ease.
-                </span>
+                Discover family-friendly places — <span className="text-blue-600">without the guesswork.</span>
               </h1>
 
               <p className="text-lg md:text-xl text-slate-500 max-w-xl mx-auto md:mx-0 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-                Know the facilities upfront (play areas, pram access, toilets, parking, shade, noise). Stop Googling "kid friendly" and calling places to check—FamPal does it for you.
+                FamPal finds restaurants, play spots, wine farms, outdoor adventures, and more near you. Know the facilities upfront, get AI-powered recommendations, and plan together with your partner or other families.
                 <span className="block mt-2 text-sm text-slate-400">Private by default. Secure by design.</span>
               </p>
 
@@ -87,7 +61,6 @@ export default function Home() {
                 </Button>
               </div>
 
-              {/* Hero social proof (hidden until real traction exists) */}
               {SHOW_HERO_SOCIAL_PROOF && (
                 <div className="pt-4 flex items-center justify-center md:justify-start gap-4 text-sm text-slate-400 animate-in fade-in duration-1000 delay-500">
                   <div className="flex -space-x-2">
@@ -97,7 +70,6 @@ export default function Home() {
                         className="w-8 h-8 rounded-full border-2 border-white bg-slate-200 overflow-hidden"
                         aria-hidden="true"
                       >
-                        {/* NOTE: Replace these placeholder circles with real avatar images or a real metric. */}
                         <div className="w-full h-full bg-slate-300"></div>
                       </div>
                     ))}
@@ -113,7 +85,6 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-orange-200 to-blue-200 rounded-full blur-[80px] opacity-40 -z-10 transform translate-y-10"></div>
                 <PhoneMockup />
 
-                {/* Floating Elements */}
                 <div
                   className="absolute top-1/4 -left-12 bg-white p-3 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-3 animate-bounce"
                   style={{ animationDuration: "3s" }}
@@ -157,6 +128,8 @@ export default function Home() {
             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Where do we park?”</span>
             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Is it genuinely kid friendly or just says it is?”</span>
             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Why am I phoning places like it’s 2009?”</span>
+            <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“We ended up at another chain restaurant because we couldn't think of anything else.”</span>
+            <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“I wish I could see what other families actually recommend nearby.”</span>
           </div>
 
           <div className="pt-4">
@@ -169,68 +142,88 @@ export default function Home() {
       <section className="py-20 md:py-32">
         <div className="container-width">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Real world family advice</h2>
-            <p className="text-lg text-slate-500">We focus on the practical details that make or break a family outing.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Everything you need to plan a great family day.</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
-              icon={<MapPin className="text-blue-500" />}
-              title="Know before you go"
-              description="Show the facilities that matter: play areas, toilets, pram access, parking, shade."
-              color="bg-blue-50"
+                icon={<Compass className="text-blue-500" />}
+                title="Smart Explore"
+                description="Browse places by what you're in the mood for — Eat & Drink, Play for Kids, Outdoors, Things to Do, Sport & Active, or Indoor Fun. Irrelevant results like petrol stations, fast food chains, and shopping malls are automatically filtered out. Only genuinely family-worthy places make it through."
+                color="bg-blue-50"
             />
             <FeatureCard
-              icon={<BrainCircuit className="text-purple-500" />}
-              title="Real world family advice"
-              description="AI summarises reviews to highlight family friendliness so you don’t read 200 reviews."
-              color="bg-purple-50"
+                icon={<Filter className="text-purple-500" />}
+                title="Layered Filters"
+                description="Refine your results with five filter layers: Venue type, Food type, Kid preferences, Accessibility, and Indoor/Outdoor. Toggle 'Only show' on any filter to see strict matches only."
+                color="bg-purple-50"
             />
             <FeatureCard
-              icon={<Users className="text-green-500" />}
-              title="Plan together"
-              description="Share options with your partner or circle and decide once."
-              color="bg-green-50"
+                icon={<BrainCircuit className="text-green-500" />}
+                title="AI-Powered Insights"
+                description="Tap 'Ask AI' for personalised recommendations powered by Google Gemini. The AI considers your children's ages, dietary needs, allergies, and interests, then summarises real reviews so you don't have to read 200 of them."
+                color="bg-green-50"
             />
             <FeatureCard
-              icon={<Heart className="text-red-500" />}
-              title="Save the easy wins"
-              description="Save favourites so next weekend is a one tap decision."
-              color="bg-red-50"
+                icon={<CheckSquare className="text-red-500" />}
+                title="Know Before You Go"
+                description="See facility details upfront: play areas, pram access, toilets, parking, shade, and noise levels. No more guessing — and no more phoning ahead to check."
+                color="bg-red-50"
             />
             <FeatureCard
-              icon={<Lock className="text-orange-500" />}
-              title="Private by default"
-              description="Memories and plans are only visible to people you choose."
-              color="bg-orange-50"
+                icon={<Users className="text-orange-500" />}
+                title="Family Profiles"
+                description="Add your children with their ages. Set food preferences, allergies, accessibility needs, and favourite activity types. FamPal uses this to tailor every recommendation to your family."
+                color="bg-orange-50"
             />
             <FeatureCard
-              icon={<Shield className="text-teal-500" />}
-              title="Built on trusted tech"
-              description="Google Maps, Gemini AI, secure cloud."
-              color="bg-teal-50"
+                icon={<Heart className="text-teal-500" />}
+                title="Partner Space"
+                description="Link with your partner and share a private space. Save favourites together, create shared memories, and plan outings without the back-and-forth messaging."
+                color="bg-teal-50"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Trust Section */}
-      <section className="py-16 bg-slate-50/50 border-y border-slate-100">
-        <div className="container-width">
-          <p className="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">
-            Partnering with secure technology
-          </p>
-
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-20 opacity-80">
-            <div className="font-bold text-xl md:text-2xl text-slate-600 flex items-center gap-3">
-              <BrainCircuit className="w-8 h-8 text-purple-500" /> Gemini AI
-            </div>
-            <div className="font-bold text-xl md:text-2xl text-slate-600 flex items-center gap-3">
-              <MapPin className="w-8 h-8 text-red-500" /> Google Maps
-            </div>
-            <div className="font-bold text-xl md:text-2xl text-slate-600 flex items-center gap-3">
-              <Shield className="w-8 h-8 text-blue-500" /> Secure Cloud
-            </div>
+            <FeatureCard
+                icon={<Circle className="text-blue-500" />}
+                title="Friend Circles"
+                description="Create private groups with other families. Share your favourite finds, see what friends recommend, and coordinate group outings — all within the app."
+                color="bg-blue-50"
+            />
+            <FeatureCard
+                icon={<ClipboardList className="text-purple-500" />}
+                title="Adventures Tracker"
+                description="Mark places as visited, rate them, add notes, and build a timeline of your family's outings. Never forget a great find again."
+                color="bg-purple-50"
+            />
+            <FeatureCard
+                icon={<Share2 className="text-green-500" />}
+                title="Save & Share"
+                description="Save places for later (next weekend is a one-tap decision). Share venue details instantly via WhatsApp. Add planned activities to Google Calendar."
+                color="bg-green-50"
+            />
+            <FeatureCard
+                icon={<Sparkles className="text-red-500" />}
+                title="Fresh Finds Only"
+                description="Toggle on 'Fresh Finds' to hide places you've already saved, so you only see new discoveries."
+                color="bg-red-50"
+            />
+            <FeatureCard
+                icon={<LayoutGrid className="text-orange-500" />}
+                title="Discovery Mode"
+                description="Switch between a clean list view and a Netflix-style visual browse for a more inspiring exploration experience."
+                color="bg-orange-50"
+            />
+            <FeatureCard
+                icon={<Moon className="text-teal-500" />}
+                title="Dark Mode"
+                description="Easy on the eyes for those late-night planning sessions after the kids are in bed."
+                color="bg-teal-50"
+            />
+            <FeatureCard
+                icon={<Laptop className="text-blue-500" />}
+                title="Works Everywhere"
+                description="Designed mobile-first, but works on tablets and desktops too. Install it directly from your browser as an app — no app store needed."
+                color="bg-blue-50"
+            />
           </div>
         </div>
       </section>
@@ -248,30 +241,96 @@ export default function Home() {
 
             <Step
               number="1"
-              title="Pick a vibe"
-              description="Tell us who's coming (ages, interests) and we'll filter out the places that won't work."
+              title="Pick your vibe"
+              description="Choose a category — or search for something specific. Filter by venue type, food, kid needs, or accessibility. Set your radius from 1 to 200 km."
             />
             <Step
               number="2"
-              title="Check what matters"
-              description="See facility details and AI summaries instantly. No more guessing."
+              title="See what matters"
+              description="Facility details, AI review summaries, and family-relevant info — all at a glance. No more Googling, calling, or guessing."
             />
             <Step
               number="3"
               title="Share, go, remember"
-              description="Send the plan to your partner, enjoy the day, and save the memory privately."
+              description="Send the plan to your partner or circle via WhatsApp, add it to your calendar, enjoy the day, and save the memory privately."
             />
           </div>
         </div>
       </section>
 
-      {/* Testimonials (hidden until real reviews exist) */}
+      {/* Pricing Section */}
+      <section className="py-20 md:py-32">
+        <div className="container-width">
+            <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Pricing</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <PricingCard
+                    plan="Free"
+                    features={{
+                        "Saved Places": "25",
+                        "Memories": "15",
+                        "Circles": "5",
+                        "AI Requests / month": "5",
+                        "Preferences per category": "3",
+                        "Partner Favourites": "3",
+                        "Partner Memories": "3",
+                    }}
+                />
+                <PricingCard
+                    plan="Pro"
+                    features={{
+                        "Saved Places": "Unlimited",
+                        "Memories": "Unlimited",
+                        "Circles": "Unlimited",
+                        "AI Requests / month": "100",
+                        "Preferences per category": "Unlimited",
+                        "Partner Favourites": "Unlimited",
+                        "Partner Memories": "Unlimited",
+                    }}
+                />
+                <PricingCard
+                    plan="Family / Lifetime"
+                    features={{
+                        "Saved Places": "Unlimited",
+                        "Memories": "Unlimited",
+                        "Circles": "Unlimited",
+                        "AI Requests / month": "200",
+                        "Preferences per category": "Unlimited",
+                        "Partner Favourites": "Unlimited",
+                        "Partner Memories": "Unlimited",
+                    }}
+                />
+            </div>
+        </div>
+    </section>
+
+      {/* Trust/Tech Section */}
+      <section className="py-16 bg-slate-50/50 border-y border-slate-100">
+        <div className="container-width">
+          <p className="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">
+            Built on trusted technology. Private by default.
+          </p>
+
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-20 opacity-80">
+            <div className="font-bold text-xl md:text-2xl text-slate-600 flex items-center gap-3">
+              <MapPin className="w-8 h-8 text-red-500" /> Google Maps
+            </div>
+            <div className="font-bold text-xl md:text-2xl text-slate-600 flex items-center gap-3">
+              <BrainCircuit className="w-8 h-8 text-purple-500" /> Google Gemini AI
+            </div>
+            <div className="font-bold text-xl md:text-2xl text-slate-600 flex items-center gap-3">
+              <Shield className="w-8 h-8 text-blue-500" /> Secure Cloud
+            </div>
+          </div>
+        </div>
+      </section>
+
       {SHOW_TESTIMONIALS && (
         <section className="py-20">
           <div className="container-width">
             <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Loved by families</h2>
 
-            {/* NOTE: Replace these with real App Store / Google Play reviews when available. */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <TestimonialCard
                 quote="I love that I can share photos with the grandparents without posting them on public social media."
@@ -300,12 +359,10 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvc3ZnPg==')] opacity-30"></div>
 
             <div className="relative z-10 max-w-2xl mx-auto space-y-8">
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Ready for your next adventure?</h2>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Ready for your next family adventure?</h2>
 
               <p className="text-blue-100 text-lg md:text-xl">
-                {HAS_SCALE_CLAIM
-                  ? "Join thousands of families planning better, safer days together with FamPal."
-                  : "Plan better, easier family days with FamPal."}
+                Plan better, easier family days with FamPal.
               </p>
 
               <Button
@@ -375,4 +432,20 @@ function TestimonialCard({ quote, author, role }: { quote: string; author: strin
       </div>
     </div>
   );
+}
+
+function PricingCard({ plan, features }: { plan: string; features: { [key: string]: string } }) {
+    return (
+        <div className="group p-8 rounded-3xl border border-slate-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">{plan}</h3>
+            <ul className="space-y-4 text-slate-500">
+                {Object.entries(features).map(([feature, value]) => (
+                    <li key={feature} className="flex justify-between">
+                        <span>{feature}</span>
+                        <span className="font-bold text-slate-700">{value}</span>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 }
