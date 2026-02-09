@@ -57,7 +57,7 @@ export default function Home() {
                 Less searching.<br />
                 <span className="text-blue-600">Less guessing.</span><br />
                 <span className="text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block mt-2 pb-1">
-                  Plan family adventures with ease.
+                  Plan your next adventure with ease.
                 </span>
               </h1>
 
