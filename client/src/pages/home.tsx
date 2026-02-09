@@ -26,17 +26,21 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-8">
             {/* Hero Text */}
             <div className="flex-1 text-center md:text-left space-y-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm text-sm font-medium text-blue-600 animate-in fade-in slide-in-from-bottom-4 duration-700">
+               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm text-sm font-medium text-blue-600 animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                Your family's local guide
+                The best activity planner is here
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight pb-4 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-                Discover family-friendly places — <span className="text-blue-600">without the guesswork.</span>
+                Less searching.<br />
+                <span className="text-blue-600">Less guessing.</span><br />
+                <span className="text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block mt-2 pb-1">
+                  Plan your next adventure with ease.
+                </span>
               </h1>
 
               <p className="text-lg md:text-xl text-slate-500 max-w-xl mx-auto md:mx-0 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-                FamPal finds restaurants, play spots, wine farms, outdoor adventures, and more near you. Know the facilities upfront, get AI-powered recommendations, and plan together with your partner or other families.
+                Discover restaurants, play spots, outdoor adventures, and more. Know the facilities and accessibility upfront, get AI-powered recommendations based on your preferences, and plan with a partner or friends. Stop Googling and calling places—we do the work for you.
                 <span className="block mt-2 text-sm text-slate-400">Private by default. Secure by design.</span>
               </p>
 
@@ -93,7 +97,7 @@ export default function Home() {
                     <Shield size={20} />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400 font-medium">Child Profile</p>
+                    <p className="text-xs text-slate-400 font-medium">Your Profile</p>
                     <p className="text-sm font-bold text-slate-800">Secure & Private</p>
                   </div>
                 </div>
@@ -107,7 +111,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-xs text-slate-400 font-medium">Gemini AI</p>
-                    <p className="text-sm font-bold text-slate-800">Summarising Reviews...</p>
+                    <p className="text-sm font-bold text-slate-800">Answering your questions...</p>
                   </div>
                 </div>
               </div>
@@ -122,18 +126,18 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Sound familiar?</h2>
 
           <div className="flex flex-wrap justify-center gap-4 text-slate-500">
-            <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“We need to do something with the kids… now what?”</span>
+            <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“We need to do something... now what?”</span>
             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Does this place actually have a play area?”</span>
             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Is it pram friendly or am I carrying everything?”</span>
             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Where do we park?”</span>
             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Is it genuinely kid friendly or just says it is?”</span>
             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“Why am I phoning places like it’s 2009?”</span>
             <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“We ended up at another chain restaurant because we couldn't think of anything else.”</span>
-            <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“I wish I could see what other families actually recommend nearby.”</span>
+            <span className="bg-slate-50 px-4 py-2 rounded-full border border-slate-100">“I wish I could see what other people actually recommend nearby.”</span>
           </div>
 
           <div className="pt-4">
-            <p className="text-xl font-medium text-blue-600">FamPal fixes this.</p>
+            <p className="text-xl font-medium text-blue-600">The app fixes this.</p>
           </div>
         </div>
       </section>
@@ -142,38 +146,38 @@ export default function Home() {
       <section className="py-20 md:py-32">
         <div className="container-width">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Everything you need to plan a great family day.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">The ultimate activity planner</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
                 icon={<Compass className="text-blue-500" />}
                 title="Smart Explore"
-                description="Browse places by what you're in the mood for — Eat & Drink, Play for Kids, Outdoors, Things to Do, Sport & Active, or Indoor Fun. Irrelevant results like petrol stations, fast food chains, and shopping malls are automatically filtered out. Only genuinely family-worthy places make it through."
+                description="Browse places by what you're in the mood for. Irrelevant results are automatically filtered out so only genuinely great places make it through."
                 color="bg-blue-50"
             />
             <FeatureCard
                 icon={<Filter className="text-purple-500" />}
                 title="Layered Filters"
-                description="Refine your results with five filter layers: Venue type, Food type, Kid preferences, Accessibility, and Indoor/Outdoor. Toggle 'Only show' on any filter to see strict matches only."
+                description="Refine your results with five filter layers: Venue type, Food type, your preferences, Accessibility, and Indoor/Outdoor."
                 color="bg-purple-50"
             />
             <FeatureCard
                 icon={<BrainCircuit className="text-green-500" />}
                 title="AI-Powered Insights"
-                description="Tap 'Ask AI' for personalised recommendations powered by Google Gemini. The AI considers your children's ages, dietary needs, allergies, and interests, then summarises real reviews so you don't have to read 200 of them."
+                description="Tap 'Ask AI' for personalised recommendations powered by Google Gemini. The AI considers your dietary needs, allergies, and interests, then summarises real reviews."
                 color="bg-green-50"
             />
             <FeatureCard
                 icon={<CheckSquare className="text-red-500" />}
                 title="Know Before You Go"
-                description="See facility details upfront: play areas, pram access, toilets, parking, shade, and noise levels. No more guessing — and no more phoning ahead to check."
+                description="See facility details and accessibility upfront: toilets, parking, shade, and noise levels. No more guessing — and no more phoning ahead to check."
                 color="bg-red-50"
             />
             <FeatureCard
                 icon={<Users className="text-orange-500" />}
-                title="Family Profiles"
-                description="Add your children with their ages. Set food preferences, allergies, accessibility needs, and favourite activity types. FamPal uses this to tailor every recommendation to your family."
+                title="Personalized Profiles"
+                description="Create a personalized profile with your interests, dietary needs, accessibility requirements, and more. The app uses this to tailor every recommendation to you."
                 color="bg-orange-50"
             />
             <FeatureCard
@@ -185,19 +189,19 @@ export default function Home() {
             <FeatureCard
                 icon={<Circle className="text-blue-500" />}
                 title="Friend Circles"
-                description="Create private groups with other families. Share your favourite finds, see what friends recommend, and coordinate group outings — all within the app."
+                description="Create private groups with friends. Share your favourite finds, see what your friends recommend, and coordinate group outings — all within the app."
                 color="bg-blue-50"
             />
             <FeatureCard
                 icon={<ClipboardList className="text-purple-500" />}
                 title="Adventures Tracker"
-                description="Mark places as visited, rate them, add notes, and build a timeline of your family's outings. Never forget a great find again."
+                description="Mark places as visited, rate them, add notes, and build a timeline of your outings. Never forget a great find again."
                 color="bg-purple-50"
             />
             <FeatureCard
                 icon={<Share2 className="text-green-500" />}
                 title="Save & Share"
-                description="Save places for later (next weekend is a one-tap decision). Share venue details instantly via WhatsApp. Add planned activities to Google Calendar."
+                description="Save places for later. Share venue details instantly via WhatsApp. Add planned activities to Google Calendar."
                 color="bg-green-50"
             />
             <FeatureCard
@@ -215,14 +219,8 @@ export default function Home() {
             <FeatureCard
                 icon={<Moon className="text-teal-500" />}
                 title="Dark Mode"
-                description="Easy on the eyes for those late-night planning sessions after the kids are in bed."
+                description="Easy on the eyes for those late-night planning sessions."
                 color="bg-teal-50"
-            />
-            <FeatureCard
-                icon={<Laptop className="text-blue-500" />}
-                title="Works Everywhere"
-                description="Designed mobile-first, but works on tablets and desktops too. Install it directly from your browser as an app — no app store needed."
-                color="bg-blue-50"
             />
           </div>
         </div>
@@ -232,8 +230,8 @@ export default function Home() {
       <section id="how-it-works" className="py-20 bg-slate-50">
         <div className="container-width">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">How FamPal works</h2>
-            <p className="text-slate-500">Three simple steps to easier family plans.</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">How it works</h2>
+            <p className="text-slate-500">Three simple steps to easier plans.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center relative">
@@ -242,68 +240,21 @@ export default function Home() {
             <Step
               number="1"
               title="Pick your vibe"
-              description="Choose a category — or search for something specific. Filter by venue type, food, kid needs, or accessibility. Set your radius from 1 to 200 km."
+              description="Choose a category — or search for something specific. Filter by venue type, food, your needs, or accessibility."
             />
             <Step
               number="2"
               title="See what matters"
-              description="Facility details, AI review summaries, and family-relevant info — all at a glance. No more Googling, calling, or guessing."
+              description="Facility details, AI review summaries, and relevant info — all at a glance. No more Googling, calling, or guessing."
             />
             <Step
               number="3"
               title="Share, go, remember"
-              description="Send the plan to your partner or circle via WhatsApp, add it to your calendar, enjoy the day, and save the memory privately."
+              description="Send the plan to your partner or friends via WhatsApp, add it to your calendar, enjoy the day, and save the memory privately."
             />
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 md:py-32">
-        <div className="container-width">
-            <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Pricing</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <PricingCard
-                    plan="Free"
-                    features={{
-                        "Saved Places": "25",
-                        "Memories": "15",
-                        "Circles": "5",
-                        "AI Requests / month": "5",
-                        "Preferences per category": "3",
-                        "Partner Favourites": "3",
-                        "Partner Memories": "3",
-                    }}
-                />
-                <PricingCard
-                    plan="Pro"
-                    features={{
-                        "Saved Places": "Unlimited",
-                        "Memories": "Unlimited",
-                        "Circles": "Unlimited",
-                        "AI Requests / month": "100",
-                        "Preferences per category": "Unlimited",
-                        "Partner Favourites": "Unlimited",
-                        "Partner Memories": "Unlimited",
-                    }}
-                />
-                <PricingCard
-                    plan="Family / Lifetime"
-                    features={{
-                        "Saved Places": "Unlimited",
-                        "Memories": "Unlimited",
-                        "Circles": "Unlimited",
-                        "AI Requests / month": "200",
-                        "Preferences per category": "Unlimited",
-                        "Partner Favourites": "Unlimited",
-                        "Partner Memories": "Unlimited",
-                    }}
-                />
-            </div>
-        </div>
-    </section>
 
       {/* Trust/Tech Section */}
       <section className="py-16 bg-slate-50/50 border-y border-slate-100">
@@ -329,23 +280,23 @@ export default function Home() {
       {SHOW_TESTIMONIALS && (
         <section className="py-20">
           <div className="container-width">
-            <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Loved by families</h2>
+            <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Loved by everyone</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <TestimonialCard
-                quote="I love that I can share photos with the grandparents without posting them on public social media."
+                quote="I love that I can share photos with my family without posting them on public social media."
                 author="Sarah J."
-                role="Mom of 2"
+                role="User"
               />
               <TestimonialCard
-                quote="The AI summaries save me so much time reading reviews. I know instantly if a place is toddler-friendly."
+                quote="The AI summaries save me so much time reading reviews. I know instantly if a place is right for me."
                 author="Michael T."
-                role="Dad of 3"
+                role="User"
               />
               <TestimonialCard
                 quote="Partner linking is a game changer. We both add ideas to our weekend itinerary."
                 author="Emily R."
-                role="Adventure Mom"
+                role="User"
               />
             </div>
           </div>
@@ -359,10 +310,10 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvc3ZnPg==')] opacity-30"></div>
 
             <div className="relative z-10 max-w-2xl mx-auto space-y-8">
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Ready for your next family adventure?</h2>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Ready for your next adventure?</h2>
 
               <p className="text-blue-100 text-lg md:text-xl">
-                Plan better, easier family days with FamPal.
+                Plan better, easier days out.
               </p>
 
               <Button
@@ -432,20 +383,4 @@ function TestimonialCard({ quote, author, role }: { quote: string; author: strin
       </div>
     </div>
   );
-}
-
-function PricingCard({ plan, features }: { plan: string; features: { [key: string]: string } }) {
-    return (
-        <div className="group p-8 rounded-3xl border border-slate-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">{plan}</h3>
-            <ul className="space-y-4 text-slate-500">
-                {Object.entries(features).map(([feature, value]) => (
-                    <li key={feature} className="flex justify-between">
-                        <span>{feature}</span>
-                        <span className="font-bold text-slate-700">{value}</span>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
 }
