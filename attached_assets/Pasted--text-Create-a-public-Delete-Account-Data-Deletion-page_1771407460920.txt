@@ -1,0 +1,71 @@
+```text
+Create a public “Delete Account / Data Deletion” page on the main website (www.fampal.co.za).
+
+Context
+- FamPal main marketing website: https://www.fampal.co.za
+- The web app portal is hosted at: https://app.fampal.co.za
+- Users can already delete their account inside the app, but Google Play requires a public website link explaining how to delete an account and what data is deleted.
+- The website page must be publicly accessible (no login required) and suitable to paste into Google Play Console as the “Delete account URL”.
+
+What to build
+1) Add a new route/page on www.fampal.co.za:
+   - URL: /delete-account (preferred)
+   - Also accept /account-deletion as an alias redirect if easy
+2) The page must clearly explain:
+   - How to delete the account inside the app (step-by-step)
+   - What data is deleted when deleting the account
+   - What data may be retained and why (legal/security) and for how long if applicable
+   - How users can contact support if they cannot access the app
+3) Add a “Manage my data” section with two options:
+   A) Delete my full account (redirects to app flow)
+   B) Delete some data only (without deleting the account)
+
+Partial data deletion requirements
+- Provide a simple UI on the website page that lets a logged-in user request deletion of specific categories:
+  - Saved places / favourites
+  - Search history (if stored)
+  - Reviews and notes (if supported; warn this removes their contribution)
+  - Partner links / circle membership (if applicable)
+  - Profile preferences (dietary/accessibility/interests)
+- If the user is not logged in on the app portal, show a “Log in to manage data” button that takes them to https://app.fampal.co.za/login (or the correct login route).
+- Once logged in, show the data deletion options and allow the user to submit the request.
+- The deletion should require confirmation (checkbox + confirm button), and show a success message.
+
+Implementation guidance (choose the simplest that fits existing stack)
+- If the website is a static marketing site and does not share auth with the app, keep the website page as informational only + a “Go to app to manage deletion” button.
+- If the website can integrate with the app auth (preferred), implement partial deletion actions by calling an existing API/Cloud Function endpoint, or create a new endpoint:
+  - POST /api/user/delete-data
+  - body: { categories: string[] }
+  - auth required
+  - server deletes selected data in Firestore for that user
+- Do NOT expose admin credentials.
+- Do NOT allow deleting other users’ data.
+- Log deletion requests server-side with timestamp and categories for audit.
+
+Copy to include on the page (use this wording, adjust only for accuracy)
+- Title: “Delete your FamPal account or data”
+- Short intro: “You can permanently delete your account, or delete specific data without removing your account.”
+- Section 1: “Delete your account in the app” with steps:
+  1) Open the FamPal app (app.fampal.co.za)
+  2) Go to Profile
+  3) Select Delete Account
+  4) Type DELETE to confirm
+  5) Confirm deletion
+- Section 2: “What gets deleted” list:
+  - User profile and sign-in access
+  - Saved places and favourites
+  - Reviews/notes you created (if applicable)
+  - Partner/circle links and shared spaces tied to your account
+  - Smart Insights usage history and preferences
+- Section 3: “What may be retained” (minimal):
+  - Limited data for legal compliance, fraud prevention, and security auditing
+  - If any retention period exists, state it; otherwise say “only as required by law”
+- Section 4: “Delete some data only” with login CTA + category checkboxes + confirm flow
+- Support: support@fampal.co.za (or use the correct email if different)
+
+Deliverables
+- New page/route added to www.fampal.co.za at /delete-account
+- Buttons linking to app portal for login and in-app deletion flow
+- Partial data deletion flow implemented if feasible with current auth/API; otherwise implement the UI and redirect to the app with a message “Log in to manage data deletion”
+- Ensure the page is public, mobile-friendly, and clear enough for Google Play review.
+```

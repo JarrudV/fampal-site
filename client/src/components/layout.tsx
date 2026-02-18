@@ -198,6 +198,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     Terms of Service
                   </Link>
                 </li>
+                <li>
+                  <Link href="/delete-account" className="text-slate-500 hover:text-primary transition-colors">
+                    Delete Account / Data
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
