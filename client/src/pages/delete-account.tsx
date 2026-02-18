@@ -10,6 +10,8 @@ import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 
 export default function DeleteAccount() {
+  // In a real implementation, we would check if the user is authenticated here.
+  // Since this is the marketing site, we assume they are not logged in and redirect them to the app.
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -152,98 +154,29 @@ export default function DeleteAccount() {
             <div className="pt-8">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-slate-900">Manage my data</h2>
-                <div className="flex items-center gap-2">
-                    <span className="text-sm text-slate-500">Demo Mode:</span>
-                    <Button 
-                        variant="outline" 
-                        size="sm" 
-                        onClick={() => setIsLoggedIn(!isLoggedIn)}
-                        className="h-8 text-xs"
-                    >
-                        {isLoggedIn ? "Log Out" : "Simulate Login"}
-                    </Button>
-                </div>
               </div>
 
-              {!isLoggedIn ? (
-                <Card className="bg-slate-900 text-white border-0 shadow-xl overflow-hidden relative">
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                  
-                  <CardContent className="pt-10 pb-10 text-center relative z-10">
-                    <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
-                      <Lock className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-3">Log in to manage your data</h3>
-                    <p className="text-slate-300 max-w-md mx-auto mb-8">
-                      To delete specific categories of data without deleting your entire account, you need to verify your identity first.
-                    </p>
-                    <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 font-bold px-8 rounded-full" onClick={() => setIsLoggedIn(true)}>
+              <Card className="bg-slate-900 text-white border-0 shadow-xl overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                
+                <CardContent className="pt-10 pb-10 text-center relative z-10">
+                  <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                    <Lock className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">Log in to manage your data</h3>
+                  <p className="text-slate-300 max-w-md mx-auto mb-8">
+                    To delete specific categories of data without deleting your entire account, you need to verify your identity securely in the FamPal app.
+                  </p>
+                  <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 font-bold px-8 rounded-full" asChild>
+                    <a href={`${APP_URL}/settings/data`} target="_blank" rel="noopener noreferrer">
                       Log in to Manage Data
-                    </Button>
-                    <p className="mt-4 text-xs text-slate-500">
-                      Redirects to secure login portal
-                    </p>
-                  </CardContent>
-                </Card>
-              ) : (
-                <Card className="border-slate-200 shadow-md animate-in fade-in zoom-in-95 duration-300">
-                  <CardHeader className="bg-slate-50 border-b border-slate-100">
-                    <CardTitle>Partial Data Deletion</CardTitle>
-                    <CardDescription>
-                      Select specific data categories you wish to permanently remove. This does not delete your account.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-6">
-                    <div className="space-y-4">
-                      {dataCategories.map((category) => (
-                        <div 
-                          key={category.id} 
-                          className={`
-                            flex items-start gap-3 p-4 rounded-xl border transition-all cursor-pointer
-                            ${selectedCategories.includes(category.id) 
-                              ? "border-red-200 bg-red-50/50" 
-                              : "border-slate-200 hover:border-slate-300 hover:bg-slate-50"}
-                          `}
-                          onClick={() => toggleCategory(category.id)}
-                        >
-                          <div className={`
-                            mt-0.5 w-5 h-5 rounded border flex items-center justify-center transition-colors
-                            ${selectedCategories.includes(category.id) ? "bg-red-500 border-red-500" : "bg-white border-slate-300"}
-                          `}>
-                            {selectedCategories.includes(category.id) && <Check className="w-3.5 h-3.5 text-white" />}
-                          </div>
-                          <div>
-                            <p className="font-medium text-slate-900">{category.label}</p>
-                            <p className="text-sm text-slate-500">{category.description}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-8 p-4 bg-amber-50 rounded-lg border border-amber-100 flex gap-3">
-                      <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0" />
-                      <div>
-                        <p className="text-sm font-medium text-amber-800">Warning: Action is irreversible</p>
-                        <p className="text-sm text-amber-700 mt-1">
-                          Once deleted, this data cannot be recovered. Your recommendations may be less personalized.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                  <CardFooter className="bg-slate-50 border-t border-slate-100 py-4 flex justify-between items-center">
-                    <span className="text-sm text-slate-500">
-                      {selectedCategories.length} categories selected
-                    </span>
-                    <Button 
-                      variant="destructive" 
-                      onClick={handlePartialDeletion}
-                      disabled={selectedCategories.length === 0 || isDeleting}
-                    >
-                      {isDeleting ? "Processing..." : "Delete Selected Data"}
-                    </Button>
-                  </CardFooter>
-                </Card>
-              )}
+                    </a>
+                  </Button>
+                  <p className="mt-4 text-xs text-slate-500">
+                    Redirects to secure login portal
+                  </p>
+                </CardContent>
+              </Card>
             </div>
 
             <div className="text-center pt-8 border-t border-slate-200">
